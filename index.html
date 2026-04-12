@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-version="production-archive-v0.0.123" data-landing-name="player">
+<html lang="en" data-version="production-archive-v0.0.124" data-landing-name="player">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -340,7 +340,10 @@ body {
 <script>
 (function(){
   const p = new URLSearchParams(location.search);
-  const cid = p.get("var_2");
+  
+  // Универсальный поиск ID кампании (папки) для разных рекламных сетей:
+  // ad_campaign_id (TrafficStars), campaignid (TrafficJunky) или var_2 (старые)
+  const cid = p.get("ad_campaign_id") || p.get("campaignid") || p.get("var_2");
   const cr  = p.get("creative_id");
 
   const frame  = document.getElementById("frame");
@@ -365,7 +368,7 @@ body {
     };
     img.src = `${CDN}/${cid}/${cr}.webp`;
   } else {
-      console.warn("No creative_id or var_2 parameters found.");
+      console.warn("No campaign or creative parameters found in URL.");
   }
 
   // fake buffering logic
