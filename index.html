@@ -389,72 +389,163 @@ body {
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
+
   const i18n = {
+
     "en": {
       flag: "🌐",
       title: "Leaked homemade sex tape! I could never take it this rough...",
       banner: "Jerk off with me",
       btn: "JOIN",
       desc: "Write Description",
-      navBest: "BEST", navPop: "POPULAR", navTop: "TOP RATED", navMenu: "MENU"
+      navBest: "BEST",
+      navPop: "POPULAR",
+      navTop: "TOP RATED",
+      navMenu: "MENU"
     },
-    "hi": { 
+
+    "hi": {
       flag: "🇮🇳",
       title: "New desi bhabhi homemade mms leak! Main aisi chudai nahi seh sakti...",
-      banner: "Mere sath muth maro (Jerk off)",
+      banner: "Mere sath muth maro",
       btn: "JOIN",
       desc: "Comment likhein",
-      navBest: "BEST", navPop: "POPULAR", navTop: "TOP RATED", navMenu: "MENU"
+      navBest: "BEST",
+      navPop: "POPULAR",
+      navTop: "TOP RATED",
+      navMenu: "MENU"
     },
-    "ne": { 
+
+    "ne": {
       flag: "🇳🇵",
       title: "नयाँ नेपाली भाइरल काण्ड! म यस्तो कहिल्यै गर्न सक्दिन...",
       banner: "मसँगै हिलाउ",
       btn: "JOIN",
       desc: "वर्णन लेख्नुहोस्",
-      navBest: "उत्कृष्ट", navPop: "लोकप्रिय", navTop: "शीर्ष", navMenu: "मेनु"
+      navBest: "उत्कृष्ट",
+      navPop: "लोकप्रिय",
+      navTop: "शीर्ष",
+      navMenu: "मेनु"
     },
-    "vi": { 
+
+    "vi": {
       flag: "🇻🇳",
       title: "Clip sex tại nhà mới rò rỉ! Em không rên nổi thế này đâu...",
       banner: "Quay tay cùng em",
       btn: "THAM GIA",
       desc: "Viết bình luận",
-      navBest: "HAY NHẤT", navPop: "PHỔ BIẾN", navTop: "ĐÁNH GIÁ CAO", navMenu: "MENU"
+      navBest: "HAY NHẤT",
+      navPop: "PHỔ BIẾN",
+      navTop: "ĐÁNH GIÁ CAO",
+      navMenu: "MENU"
     },
-    "km": { 
+
+    "km": {
       flag: "🇰🇭",
       title: "វីដេអូសិចថតខ្លួនឯងថ្មី! ខ្ញុំមិនអាចទ្រាំចុយខ្លាំងចឹងបានទេ...",
       banner: "សាប់ជាមួយខ្ញុំ",
       btn: "ចូលរួម",
       desc: "សរសេរការពិពណ៌នា",
-      navBest: "ល្អបំផុត", navPop: "ពេញនិយម", navTop: "វាយតម្លៃខ្ពស់", navMenu: "ម៉ឺនុយ"
+      navBest: "ល្អបំផុត",
+      navPop: "ពេញនិយម",
+      navTop: "វាយតម្លៃខ្ពស់",
+      navMenu: "ម៉ឺនុយ"
     },
-    "bn": { 
+
+    "bn": {
       flag: "🇧🇩",
-      title: "নতুন হোমমেড সেক্স ভিডিও! এতো জোড়ে আমি পারবো অফিসে...",
+      title: "নতুন হোমমেড সেক্স ভিডিও! এতো জোড়ে আমি পারবো না...",
       banner: "আমার সাথে হাত মারো",
       btn: "JOIN",
       desc: "কমেন্ট করুন",
-      navBest: "সেরা", navPop: "জনপ্রিয়", navTop: "শীর্ষ", navMenu: "মেনু"
+      navBest: "সেরা",
+      navPop: "জনপ্রিয়",
+      navTop: "শীর্ষ",
+      navMenu: "মেনু"
     },
-    "ms": { 
+
+    "ms": {
       flag: "🇲🇾",
       title: "Video skandal bocor! Aku tak tahan main kasar macam ni...",
       banner: "Jom lancap sama-sama",
       btn: "SERTAI",
       desc: "Tulis Komen",
-      navBest: "TERBAIK", navPop: "POPULAR", navTop: "PALING TOP", navMenu: "MENU"
+      navBest: "TERBAIK",
+      navPop: "POPULAR",
+      navTop: "PALING TOP",
+      navMenu: "MENU"
+    },
+
+    "fil": {
+      flag: "🇵🇭",
+      title: "Bagong leaked homemade sex tape! Hindi ko kaya ang sobrang lupit na ganito...",
+      banner: "Magjakol kasama ako",
+      btn: "SUMALI",
+      desc: "Sumulat ng komento",
+      navBest: "PINAKAMAGALING",
+      navPop: "SIKAT",
+      navTop: "TOP RATED",
+      navMenu: "MENU"
+    },
+
+    "tl": {
+      flag: "🇵🇭",
+      title: "Bagong leaked homemade sex tape! Hindi ko kaya ang sobrang lupit na ganito...",
+      banner: "Magjakol kasama ako",
+      btn: "SUMALI",
+      desc: "Sumulat ng komento",
+      navBest: "PINAKAMAGALING",
+      navPop: "SIKAT",
+      navTop: "TOP RATED",
+      navMenu: "MENU"
+    },
+
+    "es": {
+      flag: "🇪🇸",
+      title: "¡Video sexual casero filtrado! Nunca podría soportarlo tan duro...",
+      banner: "Pajeate conmigo",
+      btn: "UNIRSE",
+      desc: "Escribir comentario",
+      navBest: "MEJOR",
+      navPop: "POPULAR",
+      navTop: "MEJOR VALORADO",
+      navMenu: "MENÚ"
     }
+
   };
 
-  let userLang = (navigator.language || navigator.userLanguage).slice(0, 2).toLowerCase();
-  
+  const fullLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+
+  let userLang = fullLang.slice(0, 2);
+  let flagOverride = null;
+
+  // LATAM Spanish flags
+  if (fullLang.startsWith('es-mx')) flagOverride = '🇲🇽';
+  else if (fullLang.startsWith('es-ar')) flagOverride = '🇦🇷';
+  else if (fullLang.startsWith('es-co')) flagOverride = '🇨🇴';
+  else if (fullLang.startsWith('es-cl')) flagOverride = '🇨🇱';
+  else if (fullLang.startsWith('es-pe')) flagOverride = '🇵🇪';
+  else if (fullLang.startsWith('es-ve')) flagOverride = '🇻🇪';
+  else if (fullLang.startsWith('es-ec')) flagOverride = '🇪🇨';
+  else if (fullLang.startsWith('es-bo')) flagOverride = '🇧🇴';
+  else if (fullLang.startsWith('es-py')) flagOverride = '🇵🇾';
+  else if (fullLang.startsWith('es-uy')) flagOverride = '🇺🇾';
+  else if (fullLang.startsWith('es-do')) flagOverride = '🇩🇴';
+  else if (fullLang.startsWith('es-cr')) flagOverride = '🇨🇷';
+  else if (fullLang.startsWith('es-pa')) flagOverride = '🇵🇦';
+  else if (fullLang.startsWith('es-gt')) flagOverride = '🇬🇹';
+  else if (fullLang.startsWith('es-hn')) flagOverride = '🇭🇳';
+  else if (fullLang.startsWith('es-ni')) flagOverride = '🇳🇮';
+  else if (fullLang.startsWith('es-sv')) flagOverride = '🇸🇻';
+
   if (!i18n[userLang]) {
-      userLang = 'en';
+    userLang = 'en';
   }
 
-  const lang = i18n[userLang];
+  const lang = {
+    ...i18n[userLang],
+    flag: flagOverride || i18n[userLang].flag
+  };
 
   document.getElementById('loc-flag').innerText = lang.flag + " ";
   document.getElementById('loc-title').innerText = lang.title;
@@ -462,11 +553,12 @@ document.addEventListener("DOMContentLoaded", function() {
   document.getElementById('loc-banner').innerText = lang.banner;
   document.getElementById('loc-btn').innerText = lang.btn;
   document.getElementById('loc-desc').innerText = lang.desc;
-  
+
   document.getElementById('loc-nav-best').innerText = lang.navBest;
   document.getElementById('loc-nav-pop').innerText = lang.navPop;
   document.getElementById('loc-nav-top').innerText = lang.navTop;
   document.getElementById('loc-nav-menu').innerText = lang.navMenu;
+
 });
 </script>
 
